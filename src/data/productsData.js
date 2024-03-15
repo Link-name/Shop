@@ -8,7 +8,7 @@ import coasters6 from'@/assets/img/img_products/Подставки/OMcMcuyB0K4.j
 import coasters7 from'@/assets/img/img_products/Подставки/pnTeU6ilMws.jpg'
 import coasters8 from'@/assets/img/img_products/Подставки/RghqabKn-R4.jpg'
 
-import with_epoxy_resin1 from'@/assets/img/img_products/С эпоксидной смолой/_L_Qs-So1jE.jpg'
+import with_epoxy_resin1 from'@/assets/img/img_products/С эпоксидной смолой/_L_Qs-So1jE.jp'
 import with_epoxy_resin2 from'@/assets/img/img_products/С эпоксидной смолой/81FDaBcmjUE.jpg'
 import with_epoxy_resin3 from'@/assets/img/img_products/С эпоксидной смолой/C7EetIYaVaE.jpg'
 import with_epoxy_resin4 from'@/assets/img/img_products/С эпоксидной смолой/JbNoH4ZZH04.jpg'
