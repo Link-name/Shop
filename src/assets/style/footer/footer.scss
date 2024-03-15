@@ -1,0 +1,91 @@
+@import '../_vars';
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    margin-top: 50px;
+    background-color: #555454;
+    color: $text-color;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+
+
+    &__container {
+        padding-left: 10%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__container__row {
+        max-width: 1000px;
+        gap: 50px;
+        display: flex;
+
+
+        &__col-md-4 {
+            width: 33.33333%; 
+            padding: 0 15px; 
+
+            &__text {
+                padding-top: 5px;
+                font-size: 0.875em;
+            }
+
+            &__links__link {
+                text-decoration: none;
+                color: $text-color;
+            }
+
+            &__social-icons {
+
+                padding-top: 20px;
+
+                &__link {
+                    padding-left: 15px;
+                }
+            }
+
+            li {
+                padding-top: 5px;
+                list-style-type: none;
+                font-size: 0.875em;
+            }
+        }
+    }
+
+    &__bottom-bar {
+        margin-top: 10px;
+        background-color: #29292b; // Цвет фона нижней полосы
+        padding: 10px 0;
+
+        &__text {
+            text-align: center; // Выравнивание текста по центру
+        }
+    }
+}
+@media (min-width:320px) and (max-width:767px) {
+    .footer{
+        font-size: 12px;
+        &__container__row {
+            gap: 20px;
+    
+        }
+    }
+    
+
+  
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+
+    .footer{
+        font-size: 12px;
+    }
+   
+
+
+
+}

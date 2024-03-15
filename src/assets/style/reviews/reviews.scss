@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+
+    padding-left: calc(50% - 930px);
+    padding-right: calc(50% - 930px);
+    overflow: hidden;
+    position: relative;}
+
+.section {
+    .container {
+        padding-left: calc(50% - 850px);
+        padding-right: calc(50% - 850px);
+        overflow: hidden;
+        position: relative;
+
+        &__reviews__text {
+            padding-top: 30px;
+            display: flex;
+            gap: 50px;
+            max-width: 1300px;
+
+        }
+    }
+
+    &__title {
+        font-family: 'Ubuntu Condensed', sans-serif;
+        font-size: 2.5em;
+        text-shadow: 1px 1px 2px #0f0f0f;
+    }
+
+    &__reviews {
+        position: relative;
+        height: 300px;
+        width: 100%;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url('../../assets/img/reviews.png');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url('../../assets/img/reviews.webp');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        margin-top: 50px;
+
+        &__text-nik {
+            font-family: "Caveat", cursive;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.6875em;
+            color: #ffffffbf;
+            text-shadow: 1px 1px 2px #0f0f0f;
+        }
+
+        &__nik {
+            font-family: 'Caveat', cursive;
+            padding: 10px;
+            text-align: center;
+            font-size: 2em;
+            text-shadow: 1px 1px 2px #0f0f0f;
+
+
+        }
+
+    }
+
+}
+@media (min-width:320px) and (max-width:767px) {
+    .container{
+        font-size: 8px;
+    }
+    .section .container__reviews__text{
+        padding-top: 10px;
+        gap: 10px;
+
+    }
+    .section__reviews {
+        padding-top: 20px;
+        height: 200px;
+     
+    }
+  
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+
+    .container{
+        font-size: 10px;
+    }
+    .section .container__reviews__text{
+        padding-top: 10px;
+        gap: 20px;
+
+    }
+    .section__reviews {
+        
+        height: 200px;
+     
+    }
+
+
+
+}

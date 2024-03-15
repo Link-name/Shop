@@ -1,0 +1,227 @@
+@import '../_vars';
+@import '../mixsins';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: relative;
+
+    &__img {
+        width: 100%;
+        display: block;
+    }
+
+    &__top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.14);
+        color: $text-color;
+        display: flex;
+        justify-content: center;
+        gap: 5%;
+    }
+
+    &__bottom {
+        padding-bottom: 30px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: $text-color;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+
+        &__title {
+            color: rgb(11 11 11 / 86%);
+            font-family: "Comforter", cursive;
+            font-family: "Pacifico", cursive;
+            font-size: 2.1875em; // 35px / 16px
+            font-weight: 400;
+            line-height: 3.065em;
+            text-align: center;
+            -webkit-text-stroke: 0.3px rgb(0 0 0);
+        }
+    }
+
+    &__button {
+
+        @include styleButtonBigMain;
+    }
+
+    &__button:hover {
+        @include styleButtonBigHoverMain;
+    }
+
+    &__button:active {
+        @include styleButtonActiveMain;
+    }
+
+    .nav {
+
+        &--left,
+        &--right {
+            padding-top: 73px;
+            display: flex;
+            gap: 40px;
+        }
+
+        &__link {
+            cursor: pointer;
+            gap: 10px;
+            display: flex;
+            text-decoration: none;
+            font-family: Gilroy;
+            font-weight: 400;
+            line-height: 150%;
+            text-align: left;
+            color: #f5f5dc;
+            font-size: 1.65em; // 26px / 16px
+            text-shadow:
+                -1px -1px 0 #805a2c,
+                1px -1px 0 #805a2c,
+                -1px 1px 0 #805a2c,
+                1px 1px 0 #805a2c;
+            transition: color 0.3s;
+
+            &__basket {
+                display: flex;
+            }
+        }
+
+        &__search,
+        &__cart {
+            display: flex;
+            gap: 14px;
+        }
+
+        &__link:hover {
+            color: $text-color-hover;
+        }
+
+        .nav__link:hover .nav__link__svg path {
+            fill: $text-color-hover;
+        }
+
+        &__link__svg {
+            padding-top: 5px;
+        }
+
+        &__link__svg path {
+            transition: fill 0.3s;
+        }
+
+        &__link__svg path:hover {
+            fill: $text-color-hover;
+        }
+    }
+
+    .logo {
+        &__text {
+            font-family: "Kablammo", system-ui;
+            font-size: 4.375em; // 70px / 16px
+            font-weight: 600;
+            color: $logo-color;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        &__subtext {
+            padding-left: 8.125em;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.5em; // 24px / 16px
+            color: $logo-color-text;
+            text-shadow: 1px 1px 2px #e8ec1c;
+        }
+    }
+}
+
+
+@media (min-width:768px) and (max-width:1200px) {
+    .header {
+        font-size: 10px;
+
+        .header__img[data-v-7d9ec00c] {
+
+            display: block;
+            height: 100px;
+        }
+
+        &__bottom {
+            gap: 5px;
+            padding-bottom: 25px;
+
+
+        }
+
+        &__button {
+            padding: 10px 15px;
+
+        }
+
+
+        .nav--left,
+        .nav--right {
+            padding-top: 50px;
+            gap: 10px;
+        }
+        .nav__link__svg {
+            width: 20px; 
+            height: 20px; 
+            padding-top: 0px
+          }
+          .nav__link {
+            gap: 2px;
+          }
+
+
+    }
+}
+
+@media (min-width:320px) and (max-width:767px) {
+    .header {
+        font-size: 5px;
+
+        .header__img[data-v-7d9ec00c] {
+            width: 100%;
+            display: block;
+            height: 100px;
+        }
+
+        &__bottom {
+            gap: 1px;
+            padding-bottom: 15px;
+
+        }
+           
+        &__button {
+            padding: 1px 10px;
+          
+
+        }
+
+        .nav--left,
+        .nav--right {
+            padding-top: 20px; // Уменьшаем верхний отступ для навигации
+            gap: 10px; // Уменьшаем расстояние между элементами навигации
+        }
+        .nav__link__svg {
+            width: 10px; 
+            height: 10px; 
+            padding-top: 0px
+          }
+          .nav__link {
+            gap: 0px;
+          }
+          
+
+
+
+    }
+}
