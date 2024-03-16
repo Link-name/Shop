@@ -147,12 +147,6 @@
     .header {
         font-size: 10px;
 
-        .header__img[data-v-7d9ec00c] {
-
-            display: block;
-            height: 100px;
-        }
-
         &__bottom {
             gap: 5px;
             padding-bottom: 25px;
@@ -179,19 +173,15 @@
           .nav__link {
             gap: 2px;
           }
-
-
+    }
+    .header .logo__subtext {
+        padding-left: 0;
+        color: #dada21;
     }
 }
 @media (min-width:481px) and (max-width:767px) {
     .header {
         font-size: 7.5px;
-
-        .header__img {
-            width: 100%;
-            display: block;
-            height: 80px;
-        }
 
         &__bottom {
             gap: 1px;

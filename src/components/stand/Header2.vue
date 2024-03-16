@@ -99,10 +99,31 @@ export default {
 }
 
 @media (min-width:1200px) and (max-width:1800px) {
-
-
   .header__img {
     height: 140px;
   }
+}
+@media (min-width:1024px) and (max-width:1200px) {
+  .header__img {
+    height: 100px;
+  }
+}
+@media (min-width:768px) and (max-width:1024px) {
+  .header__img {
+    height: 100px;
+  }
+  
+}
+@media (min-width:481px) and (max-width:767px) {
+  .header__img {
+    height: 80px;
+  }
+  
+}
+@media (min-width:320px) and (max-width:481px) {
+  .header__img {
+    height: 80px;
+  }
+  
 }
 </style>
