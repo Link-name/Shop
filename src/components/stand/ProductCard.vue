@@ -30,7 +30,6 @@
   });
   
   const swiperContainer = ref(null);
-  
   onMounted(() => {
     new Swiper(swiperContainer.value, {
       modules: [Navigation],

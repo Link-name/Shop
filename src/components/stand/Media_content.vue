@@ -15,7 +15,6 @@
                     {{ playingStates.myVideo1 ? 'Стоп' : 'Воспроизвести' }}
                 </button>
             </div>
-
             <!-- Блок с фотографиями -->
             <div class="center-content">
                 <img class="main-photo multimedia__img1" :src="img1glav" alt="" @click="toggleEnlarge('img1glav')" :class="{ 'enlarged': enlargedImgId === 'img1glav' }">

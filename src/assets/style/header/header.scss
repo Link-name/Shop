@@ -168,7 +168,7 @@
 
         .nav--left,
         .nav--right {
-            padding-top: 50px;
+            padding-top: 45px;
             gap: 10px;
         }
         .nav__link__svg {
@@ -183,33 +183,68 @@
 
     }
 }
-
-@media (min-width:320px) and (max-width:767px) {
+@media (min-width:481px) and (max-width:767px) {
     .header {
-        font-size: 5px;
+        font-size: 7.5px;
 
-        .header__img[data-v-7d9ec00c] {
+        .header__img {
             width: 100%;
             display: block;
-            height: 100px;
+            height: 80px;
         }
 
         &__bottom {
             gap: 1px;
             padding-bottom: 15px;
-
         }
            
         &__button {
             padding: 1px 10px;
           
-
         }
-
         .nav--left,
         .nav--right {
-            padding-top: 20px; // Уменьшаем верхний отступ для навигации
+            padding-top:30px; // Уменьшаем верхний отступ для навигации
             gap: 10px; // Уменьшаем расстояние между элементами навигации
+        }
+        .nav__link__svg {
+            width: 15px; 
+            height: 15px; 
+            padding-top: 0px
+          }
+          .nav__link {
+            text-shadow: none;
+            gap: 4px;
+          }
+          
+    }
+    .header .logo__subtext {
+        padding-left: 0;
+        color: #dada21;}
+    
+}
+
+@media (min-width:320px) and (max-width:480px) {
+    .header {
+        font-size: 4px;
+
+        .header__img[data-v-7d9ec00c] {
+            width: 100%;
+            display: block;
+            height: 50px;
+        }
+        &__bottom {
+            gap: 1px;
+            padding-bottom: 15px;
+        }
+        &__button {
+            padding: 1px 10px;
+        }
+        .nav--left,
+        .nav--right {
+            padding-top: 15px; // Уменьшаем верхний отступ для навигации
+            gap: 10px; // Уменьшаем расстояние между элементами навигации
+            font-size: 5px;
         }
         .nav__link__svg {
             width: 10px; 
@@ -217,11 +252,11 @@
             padding-top: 0px
           }
           .nav__link {
+            text-shadow: none;
             gap: 0px;
           }
-          
-
-
-
     }
-}
+    .header .logo__subtext {
+        padding-left: 0;
+        color: #dada21;}
+    }

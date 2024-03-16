@@ -16,9 +16,6 @@ $font-stack: "Cormorant Infant", serif;
 
 }
 
-
-
-
 .contener {
   border-radius: 15px;
   background-color: #f5f5dc;
@@ -54,7 +51,6 @@ $font-stack: "Cormorant Infant", serif;
   box-shadow: 0 0 10px rgb(203, 156, 17);
   position: relative;
 
-
   .swiper-button-next {
     right: 10px;
   }
@@ -81,10 +77,9 @@ $font-stack: "Cormorant Infant", serif;
   font-family: $font-stack;
   font-style: normal;
   &__title {
+    padding-right: 15px;
     font-weight: 600;
     font-size: 2em;
-
-
   }
 
   &__price {
@@ -167,61 +162,7 @@ $font-stack: "Cormorant Infant", serif;
 }
 
 
-@media (min-width:320px) and (max-width:767px) {
-  .contener{
-    font-size: 8px;
-    
-  }
-  .big__image[data-v-5dd84899] {
-    height: 150px;
-    width: 150px;
-}
-  
-.contener[data-v-5dd84899] {
 
-  max-width: 400px;
-  height:   200px;
- 
-}
-.product-card[data-v-5dd84899] {
-  max-width: 400px;
-  height:   200px;
-}
-.contener{
-  padding: 10px;
-}
-  
-.image-container[data-v-5dd84899] {
-  position: relative;
-  height: 150px;
-}
-.product-details__text{
-  padding: 10px;
-}
-img{
-  height: 40px;
-};
-.contener {
-
-  left: 20%; /* Разместить элемент по центру по горизонтали */
-  top: 30%; /* Разместить элемент по центру по вертикали */
-  transform: translate(-10%, -50%); /* Смещение элемента обратно на половину его ширины и высоты */
-  
-}
-.product-card .product-details {
-  padding: 5px;
-}
-.product-details__button {
-
-  margin-top: 10px;
-  padding: 7px 15px;
-  
-}
-.product-card .product-details {
-  min-width: 100px;
-
-}
-}
 
 @media (min-width:768px) and (max-width:1024px) {
   .contener{
@@ -240,7 +181,7 @@ img{
  
 }
 .product-card[data-v-5dd84899] {
-  max-width: 600px;
+  max-width: 100%;
   height:   400px;
 }
 .contener{
@@ -258,12 +199,120 @@ img{
   height: 75px;
 };
 .contener {
-  left: 20%; /* Разместить элемент по центру по горизонтали */
-  top: 30%; /* Разместить элемент по центру по вертикали */
-  transform: translate(-10%, -50%); /* Смещение элемента обратно на половину его ширины и высоты */
+  left: 20%; 
+  top: 30%; 
+  transform: translate(-10%, -50%); 
 }
 .product-card .product-details {
   min-width: 100px;
   
+}
+}
+@media (min-width:481px) and (max-width:767px) {
+  .contener{
+    font-size: 8px;
+    
+  }
+  .big__image[data-v-5dd84899] {
+    height: 150px;
+    width: 150px;
+}
+  
+.contener[data-v-5dd84899] {
+
+  max-width: 400px;
+  height:   200px;
+ 
+}
+.product-card[data-v-5dd84899] {
+  max-width: 100%;
+  height:   200px;
+}
+.contener{
+  padding: 10px;
+}
+  
+.image-container[data-v-5dd84899] {
+  position: relative;
+  height: 150px;
+}
+.product-details__text{
+  padding: 10px;
+}
+img{
+  height: 40px;
+};
+.contener {
+  left: 20%;
+  top: 30%; 
+  transform: translate(-10%, -50%); 
+  
+}
+.product-card .product-details {
+  padding: 5px;
+}
+.product-details__button {
+
+  margin-top: 10px;
+  padding: 7px 15px;
+  
+}
+.product-card .product-details {
+  min-width: 100px;
+
+}
+}
+@media (min-width:320px) and (max-width:480px) {
+  .contener{
+    font-size: 7px;
+    
+  }
+  .big__image[data-v-5dd84899] {
+    height: 150px;
+    width: 150px;
+}
+  
+.contener[data-v-5dd84899] {
+
+  max-width: 300px;
+  height:   200px;
+ 
+}
+.product-card[data-v-5dd84899] {
+  max-width: 100%;
+  height:   200px;
+}
+.contener{
+  padding: 10px;
+}
+  
+.image-container[data-v-5dd84899] {
+  position: relative;
+  height: 150px;
+}
+.product-details__text{
+  padding: 5px;
+}
+img{
+  height: 40px;
+};
+.contener {
+  left: 20%;
+  top: 30%; 
+  transform: translate(-10%, -50%); 
+  
+}
+.product-card .product-details {
+  padding: 5px;
+}
+.product-details__button {
+
+  margin-top: 10px;
+  padding: 7px 15px;
+  
+}
+.product-card .product-details {
+  min-width: 100px;
+
 }
 }

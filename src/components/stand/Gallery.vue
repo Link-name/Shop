@@ -3,7 +3,7 @@
       <section class="gallery">
          <h1 class="gallery__title">Наcтоящая красота здесь!</h1>
          <div class="gallery__categories">
-           <a v-for="(category, index) in categories" :key="index" class="gallery__categories__link" href="#"
+            <a v-for="(category, index) in categories" :key="index" class="gallery__categories__link" href="#"
                @click.prevent="setActiveCategory(category)">
                <nobr></nobr>
                {{ category }}
@@ -28,9 +28,7 @@ import cutting__boards from "@/assets/img/gallety_img/разделочные_д�
 import tables from "@/assets/img/gallety_img/столики.jpg"
 import trays from "@/assets/img/gallety_img/подносы.jpg"
 import present from "@/assets/img/gallety_img/подарки.jpg"
-
 export default {
-
    data() {
       return {
          trays: trays,
@@ -55,16 +53,16 @@ export default {
    methods: {
       setActiveCategory(category) {
 
-      if (this.categories.includes(category)) {
-         this.$router.push({ name: 'Our_works', params: { category } });
-      } else {
-  
-         const item = this.items.find(item => item.title === category);
-         if (item) {
-            this.$router.push({ name: 'Our_works', params: { category: item.category } });
+         if (this.categories.includes(category)) {
+            this.$router.push({ name: 'Our_works', params: { category } });
+         } else {
+
+            const item = this.items.find(item => item.title === category);
+            if (item) {
+               this.$router.push({ name: 'Our_works', params: { category: item.category } });
+            }
          }
-      }
-   },
+      },
    }
 };
 

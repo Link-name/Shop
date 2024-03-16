@@ -64,18 +64,14 @@
                         <h2>Привет, это "Лукоморье".</h2><br>
                         <p>Спасибо за заказ!<br> Мы свяжемся с вами в ближайшее время.</p>
                     </div>
-
                     <label for="name">Имя</label>
-                    <input type="text" v-model="form.name" required>
-
+                    <input class="form_imput" type="text" v-model="form.name" required>
                     <label for="email">e-mail</label>
-                    <input type="email" v-model="form.email" required>
-
+                    <input class="form_imput" type="email" v-model="form.email" required>
                     <label for="phone">телефон</label>
-                    <input type="tel" v-model="form.phone" required>
-
+                    <input class="form_imput" type="tel" v-model="form.phone" required>
                     <label for="comments">комментарий к заказу</label>
-                    <textarea v-model="form.comments"></textarea>
+                    <textarea  class="form_imput" v-model="form.comments"></textarea>
 
                     <button type="submit">Заказать</button>
                 </form>
@@ -124,36 +120,22 @@ function removeFromCart(id) {
 
 .plus-minus__button {
     background-color: #4CAF50;
-    /* Зеленый фон */
     border: none;
-    /* Без границ */
     color: white;
-    /* Белый текст */
     padding: 0px 10px;
-    /* Паддинг сверху/снизу и справа/слева */
     text-align: center;
-    /* Выравнивание текста по центру */
     text-decoration: none;
-    /* Без подчеркивания текста */
     display: inline-block;
-    /* Делаем кнопки строчно-блочными */
     font-size: 16px;
-    /* Размер шрифта */
     margin: 4px 2px;
-    /* Марджины вокруг кнопок */
     cursor: pointer;
-    /* Курсор в виде указателя */
     transition-duration: 0.4s;
-    /* Время эффекта перехода */
     border-radius: 5px;
-    /* Скругление углов */
 }
 
 .plus-minus__button:hover {
     outline: 1px solid #ebcd23;
     background-color: #058a0b;
-    /* Темно-зеленый фон при наведении */
 }
 
-/* Дополнительно: можно убрать стандартные стили для кнопок в браузерах */
 </style>

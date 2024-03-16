@@ -1,27 +1,35 @@
 <template>
-  <div id="app">
     <section class="gallery">
       <h1 class="gallery__title">Настоящая красота здесь!</h1>
       <div class="gallery__categories">
-        <a v-for="category in categories" :key="category" class="gallery__categories__link"
-          :class="{ 'active': currentCategory === category }" @click.prevent="setCurrentCategory(category)">
+        <router-link v-for="category in categories" 
+                     :key="category" 
+                     :to="{ name: 'Our_works', params: { category: category }}" 
+                     class="gallery__categories__link"
+                     :class="{ 'active': currentCategory === category }">
           {{ category }}
-        </a>
+        </router-link>
       </div>
       <div class="product-container">
-        <ProductItem v-for="product in displayedProducts" :key="product.id" :product="product" />
+        <ProductItem v-for="product in displayedProducts" 
+                     :key="product.id" 
+                     :product="product" />
       </div>
       <div class="page_numbering">
         <span>Стр. {{ loadedPages }} из {{ totalPages }}</span>
       </div>
-      <button class="page_reload_button" v-if="hasMoreProducts" @click="loadMoreProducts">Загрузить еще</button>
+      <button class="page_reload_button" 
+              v-if="hasMoreProducts" 
+              @click="loadMoreProducts">
+        Загрузить еще
+      </button>
     </section>
-  </div>
 </template>
 
 <script>
 import { ref, computed, watch, onMounted } from 'vue';
 import { useStore } from 'vuex';
+import { useRouter, useRoute } from 'vue-router';
 import ProductItem from './Our_works_ProductItem.vue';
 
 export default {
@@ -29,10 +37,12 @@ export default {
     ProductItem,
   },
   setup() {
-    const productsPerPage = 6;
-    const currentCategory = ref(null);
-    const displayedProducts = ref([]);
     const store = useStore();
+    const router = useRouter();
+    const route = useRoute();
+    const currentCategory = ref(route.params.category || null);
+    const displayedProducts = ref([]);
+    const productsPerPage = 6;
 
     const allFilteredProducts = computed(() => {
       return currentCategory.value
@@ -44,26 +54,28 @@ export default {
     const loadedPages = computed(() => Math.ceil(displayedProducts.value.length / productsPerPage));
     const hasMoreProducts = computed(() => displayedProducts.value.length < allFilteredProducts.value.length);
 
-    const setCurrentCategory = (category) => {
-      currentCategory.value = category;
+    watch(() => route.params.category, (newCategory) => {
+      currentCategory.value = newCategory;
       displayedProducts.value = allFilteredProducts.value.slice(0, productsPerPage);
-    };
+    }, { immediate: true });
 
     const loadMoreProducts = () => {
       const nextIndex = displayedProducts.value.length;
       const nextProducts = allFilteredProducts.value.slice(nextIndex, nextIndex + productsPerPage);
-      displayedProducts.value = [...displayedProducts.value, ...nextProducts];
+      displayedProducts.value.push(...nextProducts);
     };
 
     onMounted(() => {
-      setCurrentCategory(null); // Or set to a default category
+      // Загружаем первую страницу продуктов при монтировании
+      displayedProducts.value = allFilteredProducts.value.slice(0, productsPerPage);
     });
+
+    const categories = computed(() => store.state.categories);
 
     return {
       displayedProducts,
-      categories: store.state.categories,
+      categories,
       currentCategory,
-      setCurrentCategory,
       loadMoreProducts,
       hasMoreProducts,
       totalPages,
@@ -72,9 +84,6 @@ export default {
   },
 };
 </script>
-
-
-
 
 
 
