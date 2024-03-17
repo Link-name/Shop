@@ -1,29 +1,26 @@
 <template>
-    <section class="gallery">
-      <h1 class="gallery__title">Настоящая красота здесь!</h1>
+  <section class="gallery">
+    <h1 class="gallery__title">Настоящая красота здесь!</h1>
+    <div class="contener">
       <div class="gallery__categories">
-        <router-link v-for="category in categories" 
-                     :key="category" 
-                     :to="{ name: 'Our_works', params: { category: category }}" 
-                     class="gallery__categories__link"
-                     :class="{ 'active': currentCategory === category }">
+        <router-link v-for="category in categories" :key="category"
+          :to="{ name: 'Our_works', params: { category: category } }" class="gallery__categories__link"
+          :class="{ 'active': currentCategory === category }">
           {{ category }}
         </router-link>
       </div>
-      <div class="product-container">
-        <ProductItem v-for="product in displayedProducts" 
-                     :key="product.id" 
-                     :product="product" />
-      </div>
-      <div class="page_numbering">
-        <span>Стр. {{ loadedPages }} из {{ totalPages }}</span>
-      </div>
-      <button class="page_reload_button" 
-              v-if="hasMoreProducts" 
-              @click="loadMoreProducts">
-        Загрузить еще
-      </button>
-    </section>
+    </div>
+
+    <div class="product-container">
+      <ProductItem v-for="product in displayedProducts" :key="product.id" :product="product" />
+    </div>
+    <div class="page_numbering">
+      <span>Стр. {{ loadedPages }} из {{ totalPages }}</span>
+    </div>
+    <button class="page_reload_button" v-if="hasMoreProducts" @click="loadMoreProducts">
+      Загрузить еще
+    </button>
+  </section>
 </template>
 
 <script>
