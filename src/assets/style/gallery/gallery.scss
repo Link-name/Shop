@@ -184,7 +184,7 @@
             padding-right: calc(50% - 150px);
             width: 300px;
             display: flex;
-            margin-bottom: 15px;
+            margin-bottom: 0px;
             flex-wrap: wrap;
             justify-content: center;
 
@@ -206,7 +206,7 @@
         }
 
         &__categories__link {
-            padding: 0px
+            padding: 5px 5px
         }
     }
 }
