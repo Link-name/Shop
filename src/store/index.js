@@ -60,6 +60,9 @@ const store = createStore({
     removeCartItem(state, id) {
       state.cartItems = state.cartItems.filter(item => item.id !== id);
     },
+    CLEAR_CART_ITEMS(state) {
+      state.cartItems = []; // Очистка корзины
+    },
 
   },
   actions: {
@@ -82,6 +85,9 @@ const store = createStore({
     removeFromCart({ commit }, id) {
       commit('removeCartItem', id);
     },
+    clearCart({ commit }) {
+      commit('CLEAR_CART_ITEMS'); // Вызов мутации для очистки корзины
+    },
   },
   getters: {
     cartItems: state => state.cartItems,
@@ -93,7 +99,8 @@ const store = createStore({
     },
     cartItemCount(state) {
       return state.cartItems.reduce((total, item) => total + item.quantity, 0);
-    }
+    },
+  
   }
 })
 

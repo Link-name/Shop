@@ -73,7 +73,7 @@
                     <label for="comments">комментарий к заказу</label>
                     <textarea  class="form_imput" v-model="form.comments"></textarea>
 
-                    <button type="submit">Заказать</button>
+                    <button type="submit" @click="submitOrder()">Заказать</button>
                 </form>
             </div>
         </div>
@@ -83,6 +83,7 @@
 <script setup>
 import { ref, computed } from 'vue';
 import { useStore } from 'vuex';
+import axios from 'axios';
 
 const store = useStore();
 const form = ref({ name: '', email: '', phone: '', comments: '' });
@@ -90,10 +91,27 @@ const cartItems = computed(() => store.getters.cartItems);
 const totalPrice = computed(() => cartItems.value.reduce((sum, item) => sum + item.price * item.quantity, 0));
 const isModalVisible = computed(() => store.state.isCartModalVisible);
 
-function submitOrder() {
-    console.log('Форма отправлена:', form.value);
-    // Здесь должна быть логика обработки формы заказа
+
+async function submitOrder() {
+  const orderData = {
+    name: form.value.name,
+    email: form.value.email,
+    phone: form.value.phone,
+    comments: form.value.comments,
+    cartItems: cartItems.value,
+  };
+
+  try {
+    await axios.post('/api/submit-order', orderData);
+    alert('Заказ отправлен, спасибо!');
+    store.dispatch('clearCart'); // Исправленный вызов для очистки корзины
+    closeModal(); // Закрыть модальное окно корзины
+  } catch (error) {
+    console.error('Ошибка при отправке формы:', error);
+  }
 }
+
+
 
 function closeModal() {
     store.commit('toggleCartModal', false);
