@@ -1,28 +1,27 @@
-$button-color: #5cb85c; 
+$button-color: #5cb85c;
 $font-stack: "Cormorant Infant", serif;
 
 * {
   margin: 0;
   padding: 0;
 }
-.container1{
+.container1 {
   position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 10;
-
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
 
 .contener {
   border-radius: 15px;
   background-color: #f5f5dc;
   position: fixed;
-  left: 50%; 
-  top: 50%; 
-  transform: translate(-50%, -50%); 
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   max-width: 900px;
   background: white;
   padding: 20px;
@@ -31,10 +30,8 @@ $font-stack: "Cormorant Infant", serif;
 }
 
 .image-container {
-
   position: relative;
-  height: 450px; 
- 
+  height: 450px;
 }
 
 .big__image {
@@ -85,7 +82,6 @@ $font-stack: "Cormorant Infant", serif;
   &__price {
     padding-top: 10px;
     font-size: 1.2em;
-
   }
 
   &__button {
@@ -105,11 +101,10 @@ $font-stack: "Cormorant Infant", serif;
   }
 
   &__text {
-    font-weight:600;
+    font-weight: 600;
     padding: 20px;
     color: gray;
   }
-
 }
 
 .swiper-button-next,
@@ -123,8 +118,8 @@ $font-stack: "Cormorant Infant", serif;
   color: white;
   border: none;
   cursor: pointer;
-  padding: 5px 15px; 
-  font-size: 24px; 
+  padding: 5px 15px;
+  font-size: 24px;
   display: none;
 
   &:hover {
@@ -147,7 +142,6 @@ $font-stack: "Cormorant Infant", serif;
 .thumbnails img.active {
   opacity: 1;
   border: 2px solid rgb(45, 202, 93);
-
 }
 
 .image-container:hover .swiper-button-next,
@@ -155,164 +149,142 @@ $font-stack: "Cormorant Infant", serif;
   display: block;
 }
 .big__image.zoomed-in {
- 
-  background-color: rgba(0, 0, 0, 0.5); 
-  z-index: 999; 
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
   transform: scale(1.5);
 }
 
-
-
-
-@media (min-width:768px) and (max-width:1024px) {
-  .contener{
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contener {
     font-size: 14px;
-    
   }
-  .big__image[data-v-5dd84899] {
+  .big__image {
     height: 250px;
     width: 250px;
-}
-  
-.contener[data-v-5dd84899] {
+  }
 
-  max-width: 600px;
-  height:   400px;
- 
+  .contener {
+    max-width: 600px;
+    height: 400px;
+  }
+  .product-card {
+    max-width: 100%;
+    height: 400px;
+  }
+  .contener {
+    padding: 20px;
+  }
+
+  .image-container {
+    position: relative;
+    height: 250px;
+  }
+  .product-details__text {
+    padding: 10px;
+  }
+  img {
+    height: 75px;
+  }
+  .contener {
+    left: 20%;
+    top: 30%;
+    transform: translate(-10%, -50%);
+  }
+  .product-card .product-details {
+    min-width: 100px;
+  }
 }
-.product-card[data-v-5dd84899] {
-  max-width: 100%;
-  height:   400px;
-}
-.contener{
-  padding: 20px;
-}
-  
-.image-container[data-v-5dd84899] {
-  position: relative;
-  height: 250px;
-}
-.product-details__text{
-  padding: 10px;
-}
-img{
-  height: 75px;
-};
-.contener {
-  left: 20%; 
-  top: 30%; 
-  transform: translate(-10%, -50%); 
-}
-.product-card .product-details {
-  min-width: 100px;
-  
-}
-}
-@media (min-width:481px) and (max-width:767px) {
-  .contener{
+@media (min-width: 481px) and (max-width: 767px) {
+  .contener {
     font-size: 8px;
-    
   }
-  .big__image[data-v-5dd84899] {
+  .big__image {
     height: 150px;
     width: 150px;
-}
-  
-.contener[data-v-5dd84899] {
+  }
 
-  max-width: 400px;
-  height:   200px;
- 
-}
-.product-card[data-v-5dd84899] {
-  max-width: 100%;
-  height:   200px;
-}
-.contener{
-  padding: 10px;
-}
-  
-.image-container[data-v-5dd84899] {
-  position: relative;
-  height: 150px;
-}
-.product-details__text{
-  padding: 10px;
-}
-img{
-  height: 40px;
-};
-.contener {
-  left: 20%;
-  top: 30%; 
-  transform: translate(-10%, -50%); 
-  
-}
-.product-card .product-details {
-  padding: 5px;
-}
-.product-details__button {
+  .contener {
+    max-width: 400px;
+    height: 200px;
+  }
+  .product-card {
+    max-width: 100%;
+    height: 200px;
+  }
+  .contener {
+    padding: 10px;
+  }
 
-  margin-top: 10px;
-  padding: 7px 15px;
-  
+  .image-container {
+    position: relative;
+    height: 150px;
+  }
+  .product-details__text {
+    padding: 10px;
+  }
+  img {
+    height: 40px;
+  }
+  .contener {
+    left: 20%;
+    top: 30%;
+    transform: translate(-10%, -50%);
+  }
+  .product-card .product-details {
+    padding: 5px;
+  }
+  .product-details__button {
+    margin-top: 10px;
+    padding: 7px 15px;
+  }
+  .product-card .product-details {
+    min-width: 100px;
+  }
 }
-.product-card .product-details {
-  min-width: 100px;
-
-}
-}
-@media (min-width:320px) and (max-width:480px) {
-  .contener{
+@media (min-width: 320px) and (max-width: 480px) {
+  .contener {
     font-size: 7px;
-    
   }
-  .big__image[data-v-5dd84899] {
+  .big__image {
     height: 150px;
     width: 150px;
-}
-  
-.contener[data-v-5dd84899] {
+  }
 
-  max-width: 300px;
-  height:   200px;
- 
-}
-.product-card[data-v-5dd84899] {
-  max-width: 100%;
-  height:   200px;
-}
-.contener{
-  padding: 10px;
-}
-  
-.image-container[data-v-5dd84899] {
-  position: relative;
-  height: 150px;
-}
-.product-details__text{
-  padding: 5px;
-}
-img{
-  height: 40px;
-};
-.contener {
-  left: 20%;
-  top: 30%; 
-  transform: translate(-10%, -50%); 
-  
-}
-.product-card .product-details {
-  padding: 5px;
-}
-.product-details__button {
+  .contener {
+    max-width: 300px;
+    height: 200px;
+  }
+  .product-card {
+    max-width: 100%;
+    height: 200px;
+  }
+  .contener {
+    padding: 10px;
+  }
 
-  margin-top: 10px;
-  padding: 7px 15px;
-  
-}
-.product-card .product-details {
-  min-width: 100px;
-
-}
+  .image-container {
+    position: relative;
+    height: 150px;
+  }
+  .product-details__text {
+    padding: 5px;
+  }
+  img {
+    height: 40px;
+  }
+  .contener {
+    left: 20%;
+    top: 30%;
+    transform: translate(-10%, -50%);
+  }
+  .product-card .product-details {
+    padding: 5px;
+  }
+  .product-details__button {
+    margin-top: 10px;
+    padding: 7px 15px;
+  }
+  .product-card .product-details {
+    min-width: 100px;
+  }
 }

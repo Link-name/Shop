@@ -158,22 +158,20 @@
             padding: 10px 15px;
 
         }
-
-
-        .nav--left,
-        .nav--right {
-            padding-top: 45px;
-            gap: 10px;
-        }
-        .nav__link__svg {
-            width: 20px; 
-            height: 20px; 
-            padding-top: 0px
-          }
-          .nav__link {
-            gap: 2px;
-          }
     }
+    .nav--left,
+    .nav--right {
+        padding-top: 45px;
+        gap: 10px;
+    }
+    .nav__link__svg {
+        width: 20px; 
+        height: 20px; 
+        padding-top: 0px
+      }
+      .nav__link {
+        gap: 2px;
+      }
     .header .logo__subtext {
         padding-left: 0;
         color: #dada21;
@@ -191,23 +189,22 @@
         &__button {
             padding: 1px 10px;
           
-        }
-        .nav--left,
-        .nav--right {
-            padding-top:30px; // Уменьшаем верхний отступ для навигации
-            gap: 10px; // Уменьшаем расстояние между элементами навигации
-        }
-        .nav__link__svg {
-            width: 15px; 
-            height: 15px; 
-            padding-top: 0px
-          }
-          .nav__link {
-            text-shadow: none;
-            gap: 4px;
-          }
-          
+        }   
     }
+    .nav--left,
+    .nav--right {
+        padding-top:30px; 
+        gap: 10px; 
+    }
+    .nav__link__svg {
+        width: 15px; 
+        height: 15px; 
+        padding-top: 0px
+      }
+      .nav__link {
+        text-shadow: none;
+        gap: 4px;
+      }
     .header .logo__subtext {
         padding-left: 0;
         color: #dada21;}
@@ -218,7 +215,7 @@
     .header {
         font-size: 4px;
 
-        .header__img[data-v-7d9ec00c] {
+        .header__img {
             width: 100%;
             display: block;
             height: 50px;
@@ -230,22 +227,22 @@
         &__button {
             padding: 1px 10px;
         }
-        .nav--left,
-        .nav--right {
-            padding-top: 15px; // Уменьшаем верхний отступ для навигации
-            gap: 10px; // Уменьшаем расстояние между элементами навигации
-            font-size: 5px;
-        }
-        .nav__link__svg {
-            width: 10px; 
-            height: 10px; 
-            padding-top: 0px
-          }
-          .nav__link {
-            text-shadow: none;
-            gap: 0px;
-          }
     }
+    .nav--left,
+    .nav--right {
+        padding-top: 15px; 
+        gap: 10px; 
+        font-size: 5px;
+    }
+    .nav__link__svg {
+        width: 10px; 
+        height: 10px; 
+        padding-top: 0px
+      }
+      .nav__link {
+        text-shadow: none;
+        gap: 0px;
+      }
     .header .logo__subtext {
         padding-left: 0;
         color: #dada21;}

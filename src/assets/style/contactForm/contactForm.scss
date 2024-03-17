@@ -1,7 +1,6 @@
 
-
 $font-stack: Arial, sans-serif;
-$primary-color: #d2b48c; // Пример цвета, замените на нужный цвет из вашего дизайна
+$primary-color: #d2b48c;
 .body-container{
     margin-top: 8%;
     margin-bottom: 8%;
@@ -15,7 +14,6 @@ $primary-color: #d2b48c; // Пример цвета, замените на ну�
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px #c49c67;
-
 
     &__h1 {
         color: $primary-color;
@@ -50,7 +48,6 @@ $primary-color: #d2b48c; // Пример цвета, замените на ну�
 
     .contact-info {
         margin-top: 20px;
-
         &__p {
             margin: 5px 0;
         }

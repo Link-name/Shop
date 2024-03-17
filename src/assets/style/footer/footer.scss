@@ -58,11 +58,11 @@
 
     &__bottom-bar {
         margin-top: 10px;
-        background-color: #29292b; // Цвет фона нижней полосы
+        background-color: #29292b; 
         padding: 10px 0;
 
         &__text {
-            text-align: center; // Выравнивание текста по центру
+            text-align: center;
         }
     }
 }
@@ -82,10 +82,6 @@
     .footer__container__row__col-md-4__social-icons__link {
         padding-left: 10px;
     }
-
-    
-
-  
 }
 @media (min-width:480px) and (max-width:767px) {
     .footer{

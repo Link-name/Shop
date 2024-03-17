@@ -55,9 +55,7 @@
 
 @media (min-width:768px) and (max-width:1024px) {
     .container {
-        
         font-size: 12px;
-  
     }
     .section__order__connection{
         height: 250px;
@@ -74,7 +72,7 @@
 @media (min-width:481px) and (max-width:767px) {
     .container {
         font-size: 10px;
-        .section__order__connection__title[data-v-16b7e956]{
+        .section__order__connection__title{
             width: 300px;
         }
     }
@@ -91,9 +89,9 @@
 @media (min-width:320px) and (max-width:480px) {
     .container {
         font-size: 8px;
-        .section__order__connection__title[data-v-16b7e956]{
-            width: 250px;
-        }
+    }
+    .section__order__connection__title{
+        width: 250px;
     }
     .section__order__connection{
         height: 200px;
