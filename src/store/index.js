@@ -1,5 +1,5 @@
 import { createStore } from 'vuex';
-import { categories, products } from '@/data/productsData.js'; // Добавьте эту строку
+import { categories, products } from '@/data/productsData.js'; 
 import { infoProducts } from '@/data/infoProducts';
 
 // Создание нового хранилища

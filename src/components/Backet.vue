@@ -73,7 +73,7 @@
                     <label for="comments">комментарий к заказу</label>
                     <textarea  class="form_imput" v-model="form.comments"></textarea>
 
-                    <button type="submit" @click="submitOrder()">Заказать</button>
+                    <button type="submit">Заказать</button>
                 </form>
             </div>
         </div>
