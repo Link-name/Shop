@@ -42,6 +42,11 @@
             }
         }
     }
+    .contener{
+        display: flex;
+        justify-content:center ;
+
+    }
 
     &__items {
         display: flex;

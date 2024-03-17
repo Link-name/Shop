@@ -2,13 +2,16 @@
    <main>
       <section class="gallery">
          <h1 class="gallery__title">Наcтоящая красота здесь!</h1>
-         <div class="gallery__categories">
+         <div class="contener">
+            <div class="gallery__categories">
             <a v-for="(category, index) in categories" :key="index" class="gallery__categories__link" href="#"
                @click.prevent="setActiveCategory(category)">
                <nobr></nobr>
                {{ category }}
             </a>
          </div>
+         </div>
+        
          <div class="gallery__items">
             <div v-for="item in filteredItems" :key="item.title" class="gallery__items__item img-size">
                <a :href="item.link" @click.prevent="setActiveCategory(item.title)">
