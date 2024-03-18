@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: relative;
+}
+.header__img {
+  width: 100%;
+  display: block;
+}
+.header__top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.14);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+.header__bottom {
+  padding-bottom: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.header__bottom__title {
+  color: rgba(11, 11, 11, 0.86);
+  font-family: "Comforter", cursive;
+  font-family: "Pacifico", cursive;
+  font-size: 2.1875em;
+  font-weight: 400;
+  line-height: 3.065em;
+  text-align: center;
+  -webkit-text-stroke: 0.3px rgb(0, 0, 0);
+}
+.header__button {
+  color: #fff;
+  -webkit-text-stroke: 0.2px rgb(117, 84, 11);
+  font-family: Gilroy;
+  font-size: 1.1em;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px 35px;
+  background: rgba(0, 0, 0, 0.4);
+  transition: color 0.3s;
+  transition: transform 0.2s;
+  text-decoration: none;
+}
+.header__button:hover {
+  color: #cd7f32;
+  transform: scale(1.02);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.header__button:active {
+  transform: scale(0.9);
+  box-shadow: none;
+}
+.header .nav--left, .header .nav--right {
+  padding-top: 73px;
+  display: flex;
+  gap: 40px;
+}
+.header .nav__link {
+  cursor: pointer;
+  gap: 10px;
+  display: flex;
+  text-decoration: none;
+  font-family: Gilroy;
+  font-weight: 400;
+  line-height: 150%;
+  text-align: left;
+  color: #f5f5dc;
+  font-size: 1.65em;
+  text-shadow: -1px -1px 0 #805a2c, 1px -1px 0 #805a2c, -1px 1px 0 #805a2c, 1px 1px 0 #805a2c;
+  transition: color 0.3s;
+}
+.header .nav__link__basket {
+  display: flex;
+}
+.header .nav__search, .header .nav__cart {
+  display: flex;
+  gap: 14px;
+}
+.header .nav__link:hover {
+  color: #cd7f32;
+}
+.header .nav .nav__link:hover .nav__link__svg path {
+  fill: #cd7f32;
+}
+.header .nav__link__svg {
+  padding-top: 5px;
+}
+.header .nav__link__svg path {
+  transition: fill 0.3s;
+}
+.header .nav__link__svg path:hover {
+  fill: #cd7f32;
+}
+.header .logo__text {
+  font-family: "Kablammo", system-ui;
+  font-size: 4.375em;
+  font-weight: 600;
+  color: #f5f5dc;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.header .logo__subtext {
+  padding-left: 8.125em;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+  color: #abab9a;
+  text-shadow: 1px 1px 2px #e8ec1c;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .header {
+    font-size: 10px;
+  }
+  .header__bottom {
+    gap: 5px;
+    padding-bottom: 25px;
+  }
+  .header__button {
+    padding: 10px 15px;
+  }
+  .header .nav--left,
+  .header .nav--right {
+    padding-top: 45px;
+    gap: 10px;
+  }
+  .header .nav__link__svg {
+    width: 20px;
+    height: 20px;
+    padding-top: 0px;
+  }
+  .header .nav__link {
+    gap: 2px;
+  }
+  .header .logo__subtext {
+    padding-left: 0;
+    color: #dada21;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .header {
+    font-size: 7.5px;
+  }
+  .header__bottom {
+    gap: 1px;
+    padding-bottom: 15px;
+  }
+  .header__button {
+    padding: 1px 10px;
+  }
+  .header .nav--left,
+  .header .nav--right {
+    padding-top: 30px;
+    gap: 10px;
+  }
+  .header .nav__link__svg {
+    width: 15px;
+    height: 15px;
+    padding-top: 0px;
+  }
+  .header .nav__link {
+    text-shadow: none;
+    gap: 4px;
+  }
+  .header .logo__subtext {
+    padding-left: 0;
+    color: #dada21;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .header {
+    font-size: 4px;
+  }
+  .header .header__img[data-v-7d9ec00c] {
+    width: 100%;
+    display: block;
+    height: 50px;
+  }
+  .header__bottom {
+    gap: 1px;
+    padding-bottom: 15px;
+  }
+  .header__button {
+    padding: 1px 10px;
+  }
+  .header .nav--left,
+  .header .nav--right {
+    padding-top: 15px;
+    gap: 10px;
+    font-size: 5px;
+  }
+  .header .nav__link__svg {
+    width: 10px;
+    height: 10px;
+    padding-top: 0px;
+  }
+  .header .nav__link {
+    text-shadow: none;
+    gap: 0px;
+  }
+  .header .logo__subtext {
+    padding-left: 0;
+    color: #dada21;
+  }
+}/*# sourceMappingURL=header.css.map */

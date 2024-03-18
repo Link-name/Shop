@@ -5,7 +5,7 @@
       <form @submit.prevent="submitForm">
         <input type="text" v-model="form.name" placeholder="Имя">
         <input type="tel" v-model="form.phone" placeholder="Номер телефона">
-        <textarea v-model="form.message" placeholder="Сообщение"></textarea>
+        <textarea v-model="form.comments" placeholder="Сообщение"></textarea>
         <button type="submit">Отправить</button>
       </form>
       <div class="contact-info">
@@ -24,23 +24,22 @@ import axios from 'axios';
 const form = ref({
   name: '',
   phone: '',
-  message: '',
+  comments: '',
 });
 
 const submitForm = async () => {
   const formData = {
-    name: form.value.name,
+    formType: 'contactForm', 
     phone: form.value.phone,
-    message: form.value.message,
+    comments: form.value.comments,
   };
 
   try {
-    await axios.post('/api/contact', formData);
+    await axios.post('/api/submit-order', formData);
     alert('Ваше сообщение отправлено, спасибо!');
-    // Очистка формы после отправки
     form.value.name = '';
     form.value.phone = '';
-    form.value.message = '';
+    form.value.comments = '';
   } catch (error) {
     console.error('Ошибка при отправке сообщения:', error);
   }

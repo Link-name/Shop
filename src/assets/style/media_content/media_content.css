@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.multimedia__title {
+  color: rgba(0, 0, 0, 0.8117647059);
+  margin-top: 40px;
+  text-align: center;
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-size: 2.5em;
+}
+
+.multimedia__link {
+  color: #cd7f32;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-family: "Caveat", cursive;
+  font-size: 2.1875em;
+}
+
+.multimedia {
+  gap: 15px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+.multimedia .video-container video {
+  padding: 0;
+  border: 2px solid transparent;
+}
+.multimedia .video-container video:hover {
+  border: 2px solid #111111;
+}
+.multimedia video {
+  width: 100%;
+}
+.multimedia .video-container {
+  position: relative;
+  margin-right: 0;
+}
+.multimedia .video-container button {
+  display: block;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.5803921569);
+  border: none;
+  border-radius: 5px;
+}
+.multimedia .video-container video {
+  display: block;
+  width: 18.1em;
+}
+.multimedia .video-container video.enlarged {
+  border: 2px solid transparent;
+  border-color: #111111;
+  transform: scale(1.2);
+  z-index: 3;
+}
+.multimedia .video-container:hover button,
+.multimedia .video-container:hover video {
+  display: block;
+}
+
+.center-content {
+  width: 25.625em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.center-content .main-photo {
+  width: 100%;
+}
+.center-content .three-photos {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.center-content .three-photos .multimedia__img {
+  width: 33.33333333%;
+  filter: none;
+}
+.center-content .three-photos .multimedia__img.multimedia__img__shadow {
+  filter: brightness(0.7);
+}
+
+.multimedia__img1 {
+  width: 33.333333333%;
+  transition: transform 0.3s ease;
+}
+
+.enlarged {
+  box-shadow: 0 0 0 2px black;
+  transform: scale(1.7);
+  z-index: 2;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .multimedia {
+    font-size: 10px;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .overlay {
+    font-size: 14px;
+  }
+  .multimedia {
+    font-size: 10px;
+  }
+  .multimedia__link {
+    text-align: center;
+  }
+  .video-container {
+    display: none;
+  }
+}/*# sourceMappingURL=media_content.css.map */

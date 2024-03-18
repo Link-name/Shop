@@ -94,6 +94,7 @@ const isModalVisible = computed(() => store.state.isCartModalVisible);
 
 async function submitOrder() {
   const orderData = {
+    formType: 'orderForm', 
     name: form.value.name,
     email: form.value.email,
     phone: form.value.phone,
