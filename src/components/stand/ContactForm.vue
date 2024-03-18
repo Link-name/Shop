@@ -19,6 +19,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import axios from 'axios';
 
 const form = ref({
   name: '',
@@ -26,9 +27,23 @@ const form = ref({
   message: '',
 });
 
-const submitForm = () => {
-  // Здесь может быть код для обработки формы, например, отправка данных на сервер
-  console.log(form.value); // Выводит текущие значения формы в консоль
+const submitForm = async () => {
+  const formData = {
+    name: form.value.name,
+    phone: form.value.phone,
+    message: form.value.message,
+  };
+
+  try {
+    await axios.post('/api/contact', formData);
+    alert('Ваше сообщение отправлено, спасибо!');
+    // Очистка формы после отправки
+    form.value.name = '';
+    form.value.phone = '';
+    form.value.message = '';
+  } catch (error) {
+    console.error('Ошибка при отправке сообщения:', error);
+  }
 };
 </script>
 
